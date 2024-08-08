@@ -1,9 +1,5 @@
 .header {
-  height: 293px;
   padding: 92px 24px;
-}
-
-.header_grid_container {
   display: grid;
   height: 100%;
   grid-template-columns: 2fr 1fr 2fr;
@@ -71,93 +67,92 @@
 }
 
 .cover {
-  height: 757px;
+  min-height: 757px;
   margin-bottom: 179px;
   position: relative;
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   text-transform: uppercase;
-  position: absolute;
   color: #fff;
-  font-size: 67px;
-  z-index: 2;
-  width: 100%;
-}
-
-.cover__title__items {
-  padding-top: 166px;
-  padding-left: 30px;
-  padding-right: 50px;
+  font-size: 100px;
+  letter-spacing: 0.3em;
+  line-height: 115%;
+  gap: 20px;
+  padding: 165px 50px 135px 30px;
 }
 
 .aligned-text {
   display: block;
-  letter-spacing: 30px;
+  text-align: left;
 }
 
 .aligned-text_center {
   display: block;
   text-align: center;
-  margin: 8px 0 4px;
-  letter-spacing: 30px;
-  padding-left: 15px;
+  line-height: 1; 
 }
 
 .aligned-text_right {
   display: block;
   text-align: right;
-  letter-spacing: 30px;
+  line-height: 1;
 }
 
 .letter-spacing-extended {
-  letter-spacing: 57px;
+  letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
-  letter-spacing: 0;
+  letter-spacing: initial;
 }
 
 .cover__description {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 125px 50px 51px 79px;
+  padding: 0 50px 0 78px ;
+  position: relative;
+
 }
 
 .cover__description-text {
   text-transform: uppercase;
+  color: #fff;
   font-size: 22px;
   word-spacing: 18.4px;
-  padding-top: 13px;
 }
 
 .bet-button {
   all: unset;
+  font-family: Raleway, sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-size: 22px;
   background-color: transparent;
-  border: solid 1px white;
+  border: solid 1px currentColor;
   padding: 11px 33px 10px 29px;
-  z-index: 3;
   cursor: pointer;
 }
 
 .lots {
   margin: 0 24px 0;
-  width: 1052px;
-  height: 692px;
+  min-width: 1052px;
 }
 
 .lots_header {
@@ -167,16 +162,17 @@
 }
 
 .lots__list {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 27px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  list-style: none;
+  padding-top: 27px;
 }
 
 .lots__list_item {
   width: 334px;
-  height: 563px;
+  min-height: 563px;
   position: relative;
 }
 
@@ -187,17 +183,16 @@
 }
 
 .card_item {
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  padding-top: 51px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 48px;
-  color: #fff;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 51px 40px 48px;
+  z-index: 1;
 }
 
 .card_type_film {
@@ -237,13 +232,15 @@
 }
 
 .about {
-  padding: 184px 24px 50px;
+  padding: 184px 24px 0px;
+  min-height: 776px;
 }
 
 .about__column {
   display: grid;
   grid-template-columns: 334px 1fr;
   justify-items: center;
+  min-height: 560px;
 }
 
 .about__logo {
@@ -264,7 +261,14 @@
 }
 
 .about__description {
-  padding: 99px 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 462px;
+  min-width: 693px;
+  padding-left: 25px;
+  gap: 100px;
+  
 }
 
 .about__title {
@@ -274,19 +278,17 @@
 }
 
 .about__text {
-  padding-top: 100px;
-  font-size: 20px;
-}
-
-.about__text_paragraph_1 {
-  margin-bottom: 24px;
-  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px; 
+  gap: 25px;
 }
 
 .footer {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-  padding: 130px 50px 0px;
+  padding: 148px 50px 0px;
 }
 
 .footer__address {
