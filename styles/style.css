@@ -93,7 +93,7 @@
   letter-spacing: 0.3em;
   line-height: 115%;
   gap: 20px;
-  padding: 165px 50px 135px 30px;
+  padding: 165px 50px 135px;
 }
 
 .aligned-text {
@@ -232,14 +232,12 @@
 
 .about {
   padding: 184px 24px 0px;
-  min-height: 776px;
 }
 
 .about__column {
   display: grid;
   grid-template-columns: 334px 1fr;
   justify-items: center;
-  min-height: 560px;
 }
 
 .about__logo {
@@ -263,9 +261,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 462px;
   min-width: 693px;
-  padding-left: 25px;
+  padding: 100px 0 0 25px;
   gap: 100px;
 }
 
@@ -286,7 +283,7 @@
 .footer {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-  padding: 148px 50px 0px;
+  padding: 180px 50px 88px;
 }
 
 .footer__address {
